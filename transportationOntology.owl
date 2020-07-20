@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2020/6/transportation#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2020/6/transportation"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/transportationOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#hasService -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportationOntology#hasService">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Trip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#onRoute -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportationOntology#onRoute">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/transportationOntology#Route"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Trip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#onStop -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportationOntology#onStop">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/transportationOntology#Stop"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#StopTimes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#onTrip -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/transportationOntology#onTrip">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#StopTimes"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/transportationOntology#Trip"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#agencyUrl -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#agencyUrl">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Agency"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#arrivalTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#arrivalTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#StopTimes"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#departureTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#departureTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#StopTimes"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#endDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#endDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#routeLongName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#routeLongName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Route"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#routeShortName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#routeShortName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Route"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#routeType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#routeType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Route"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#serviceEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#serviceEndDate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#serviceFriday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#serviceFriday">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#serviceMonday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#serviceMonday">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#serviceSaturday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#serviceSaturday">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#serviceStartDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#serviceStartDate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#serviceSunday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#serviceSunday">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#serviceThursday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#serviceThursday">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#serviceTuesday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#serviceTuesday">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#serviceWednesday -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#serviceWednesday">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#startDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#startDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Service"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#stopLat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#stopLat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Stop"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#stopLon -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#stopLon">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Stop"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#tripDirection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/transportationOntology#tripDirection">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/transportationOntology#Trip"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#Agency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/transportationOntology#Agency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#Route -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/transportationOntology#Route"/>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/transportationOntology#Service"/>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#Stop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/transportationOntology#Stop"/>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#StopTimes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/transportationOntology#StopTimes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/transportationOntology#Trip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/transportationOntology#Trip"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/transportationOntology#Agency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/transportationOntology#Route"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/transportationOntology#Service"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/transportationOntology#Stop"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/transportationOntology#StopTimes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/transportationOntology#Trip"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

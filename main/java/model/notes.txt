@@ -1,0 +1,4 @@
+Now dates, times --> String, better?
+Should I split RouteLongName?
+
+H have path to ontology base where aggelos had path to imdb
